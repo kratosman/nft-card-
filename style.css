@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* NEUTRAL */
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    /* text */
+    --font-size-paragraph: 18px;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+}
+
+.card-background {
+    margin: 0 auto;
+    width: 348px;
+    height: 593px;
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+}
+
+.description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.container-wrapper .nft-image img {
+    border-radius: 9px;
+    cursor: pointer;
+    width: 302px;
+    height: 302px;
+    position: relative;
+}
+
+.container-wrapper .nft-image:hover div {
+    width: 302px;
+    height: 302px;
+    position: absolute;
+    top: 73px;
+    background-color: var(--cyan);
+    border-radius: 9px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.container-wrapper .nft-image div img {
+    display: none;
+}
+
+.container-wrapper .nft-image:hover div img {
+    display: flex;
+    position: absolute;
+    transform: scale(0.15);
+    /* top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+     */
+}
+
+.top-title-header h3 {
+    color: var(--white);
+    font-family: var(--font-outfit);
+    font-weight: var(--font-weight-600);
+}
+
+.top-title-header h3:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.paragraph {
+    color: var(--soft-blue);
+    font-family: var(--font-outfit);
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-weight-300);
+    margin-top: 24px;
+}
+
+.equilibrium-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.equilibrium-price-row p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    font-family: var(--font-outfit);
+    gap: 10px;
+    font-weight: var(--font-weight-600);
+}
+
+.equilibrium-price-row p:nth-child(2) {
+    gap: 10px;
+    color: var(--soft-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-outfit);
+    font-weight: var(--font-weight-300);
+}
+
+.creator {
+    margin-top: 17px;
+    gap: 16px;
+    border-top: 1px solid var(--very-dark-blue-line);
+    width: 100%;
+}
+
+.creator-data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 17px;
+}
+
+.creator img {
+    border: 2px solid var(--white);
+    border-radius: 27px;
+}
+
+.creator p {
+    color: var(--white);
+    display: flex;
+    gap: 5px;
+    font-family: var(--font-outfit);
+}
+
+.creator p:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.creator p span {
+    color: var(--soft-blue);
+}
